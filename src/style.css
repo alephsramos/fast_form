@@ -1,0 +1,1108 @@
+body, html{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('fundo-form.jpg');
+    background-position: center;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-container{
+    padding: 0 10%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.form-container-div{
+    width: 100%;
+    display: flex;
+    height: 65vh;
+}
+
+.form-left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-text{
+    height: 15vh;
+    width: 100%;
+}
+
+.form-text h2{
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.form-text p{
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+.form-contact-div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.form-contact-left{
+    height: 5vh;
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.form-contact-left i{
+    font-size: 30px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.form-contact-right{
+    width: 90%;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 5vh;
+}
+
+.form-contact-right h6{
+    font-size: 1.4rem;
+    width: 80%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.form-contact-right p{
+    font-size: 1rem;
+    width: 80%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.div-linha{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.form-linha{
+    border: 0.5px solid #353535;
+    width: 80%;
+    float: left;
+    opacity: 0.2;
+}
+
+.form-redes{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.form-redes i{
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+    color: #353535;
+}
+
+.form-right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh!important;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px!important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    background-color: #fff;
+}
+
+.form-right-text{
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.form-right-text h2{
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.form-inputs{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-input-nome,
+.form-input-email,
+.form-input-tel{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.form-input-nome::placeholder,
+.form-input-email::placeholder,
+.form-input-tel::placeholder{
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+.form-input-nome:focus,
+.form-input-email:focus,
+.form-input-tel:focus{
+    background-color: #f3f3f3;
+    color: #353535;
+    font-size: 1rem;
+    border: none;
+}
+
+.form-right-direitos{
+    height: 8vh;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-right-direitos p{
+    font-size: 0.8rem;
+    opacity: 0.9;
+    width: 100%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+.form-submit{
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.form-submit button{
+    padding: 20px!important;
+    background-color: transparent;
+    color: #353535;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all .2s;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.form-submit button:hover{
+    background-color: #353535;
+    color: #fff;
+}
+
+
+/* Estilos para o botão desativado */
+/* Estilo para o botão após o envio */
+button[type="submit"].success-background {
+    background-color: #0c491f; /* Verde de sucesso */
+    color: #fff; /* Cor do texto */
+    border: none;
+    transition: all .2s;
+    border-radius: 5px;
+    animation: animate_pulse2 2s alternate-reverse infinite;
+}
+
+button[type="submit"].success-background:hover{
+    background-color: #078f03;
+    color: #fff;
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o ícone do WhatsApp no botão */
+button[type="submit"].success-background .whatsapp-icon {
+    font-size: 2.4rem; /* Tamanho do ícone */
+    color: white; /* Cor do ícone */
+    margin-left: 0.5rem; /* Espaçamento entre ícone e texto */
+    display: inline-block; /* Exibe o ícone */
+}
+
+/* Estilo inicial para o ícone do WhatsApp */
+.whatsapp-icon {
+    display: none; /* Esconde o ícone inicialmente */
+}
+
+/* Estilo para o overlay de carregamento */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1); /* Fundo semi-transparente branco */
+    display: none; /* Oculto por padrão */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Acima de todos os outros elementos */
+}
+
+/* Estilo para o overlay de carregamento */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255); /* Fundo semi-transparente branco */
+    display: none; /* Oculto por padrão */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Acima de todos os outros elementos */
+}
+
+/* Estilo para o spinner de carregamento */
+.spinner {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Animação de rotação do ícone */
+.spinner .fa-spinner {
+    font-size: 2rem; /* Tamanho do ícone */
+    color: #0c491f; /* Cor do ícone */
+}
+
+/* Estilo e animação para o ícone de check */
+.success-check {
+    font-size: 3rem; /* Tamanho do ícone de check */
+    color: #0c491f; /* Cor do ícone de sucesso */
+    position: absolute;
+    display: none; /* Oculto por padrão */
+    opacity: 0;
+    transition: opacity 0.5s; /* Transição suave */
+}
+
+.spinner.show-check .fa-spinner {
+    opacity: 0;
+}
+
+.spinner.show-check .fa-check {
+    display: inline-block;
+    opacity: 1;
+}
+
+/* Animação de rotação do ícone */
+@keyframes rotateSpinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+/* Estilos para o alerta de sucesso */
+
+
+@media (max-width: 576px){
+    .form-container{
+        padding: 0 10%;
+        height: 80vh;
+        width: 100%;
+    }
+    
+    .form-container-div{
+        width: 100%;
+        height: 70vh;
+    }
+    
+    .form-left{
+        display: none;
+    }
+    
+    .form-right{
+        width: 100%;
+        padding: 15px;
+        justify-content: space-evenly;
+    }
+    
+    .form-right-text{
+        height: 10vh;
+        width: 100%;
+    }
+    
+    .form-right-text h2{
+        font-size: 1.4rem;
+    }
+    
+    .form-inputs{
+        height: 30vh;
+        width: 100%;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    /* Estilos para o alerta de sucesso */
+    button[type="submit"].success-background .whatsapp-icon {
+        font-size: 1.4rem; /* Tamanho do ícone */
+    }
+
+    .success-alert {
+        padding: 20px 20px;
+        font-size: 13px;
+        text-align: center;
+        width: 70%;
+        left: 50%;
+        top: 5%;
+    }
+    
+    .form-input-nome,
+    .form-input-email,
+    .form-input-tel{
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .form-input-nome::placeholder,
+    .form-input-email::placeholder,
+    .form-input-tel::placeholder{
+        font-size: 0.8rem;
+    }
+    
+    .form-input-nome:focus,
+    .form-input-email:focus,
+    .form-input-tel:focus{
+        font-size: 0.8rem;
+    }
+    
+    .form-right-direitos{
+        height: 8vh;
+        width: 100%;
+    }
+    
+    .form-right-direitos p{
+        font-size: 0.7rem;
+        width: 100%;
+    }
+    
+    .form-submit{
+        height: 7vh;
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .form-submit button{
+        padding: 15px;
+        width: 100%;
+    }
+    
+}
+
+@media (min-width: 576px) and (max-width: 769px){
+    .form-container{
+        padding: 0 10%;
+        height: 80vh;
+        width: 100%;
+    }
+    
+    .form-container-div{
+        width: 100%;
+        height: 70vh;
+    }
+    
+    .form-left{
+        display: none;
+    }
+    
+    .form-right{
+        width: 100%;
+        padding: 15px;
+        justify-content: space-evenly;
+    }
+    
+    .form-right-text{
+        height: 10vh;
+        width: 100%;
+    }
+    
+    .form-right-text h2{
+        font-size: 1.8rem;
+    }
+    
+    .form-inputs{
+        height: 30vh;
+        width: 100%;
+        gap: 10px;
+        padding: 5px;
+    }
+    
+    .form-input-nome,
+    .form-input-email,
+    .form-input-tel{
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .form-input-nome::placeholder,
+    .form-input-email::placeholder,
+    .form-input-tel::placeholder{
+        font-size: 1rem;
+    }
+    
+    .form-input-nome:focus,
+    .form-input-email:focus,
+    .form-input-tel:focus{
+        font-size: 1rem;
+    }
+    
+    .form-right-direitos{
+        height: 8vh;
+        width: 100%;
+    }
+    
+    .form-right-direitos p{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    button[type="submit"].success-background .whatsapp-icon {
+        font-size: 2rem; /* Tamanho do ícone */
+    }
+
+    .success-alert {
+        padding: 20px 20px;
+        font-size: 13px;
+        text-align: center;
+        width: 50%;
+        left: 50%;
+        top: 10%;
+    }
+    
+    .form-submit{
+        height: 7vh;
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .form-submit button{
+        padding: 15px;
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px){
+    .form-container{
+        padding: 0 10%;
+        height: 60vh;
+        width: 100%;
+    }
+    
+    .form-container-div{
+        width: 100%;
+        height: 50vh;
+    }
+    
+    .form-left{
+        display: none;
+    }
+    
+    .form-right{
+        width: 100%;
+        padding: 15px;
+        justify-content: space-evenly;
+    }
+
+    button[type="submit"].success-background .whatsapp-icon {
+        font-size: 2rem; /* Tamanho do ícone */
+    }
+
+    .success-alert {
+        padding: 20px 20px;
+        font-size: 13px;
+        text-align: center;
+        width: 50%;
+        left: 50%;
+        top: 10%;
+    }
+    
+    .form-right-text{
+        height: 10vh;
+        width: 100%;
+    }
+    
+    .form-right-text h2{
+        font-size: 2rem;
+    }
+    
+    .form-inputs{
+        height: 30vh;
+        width: 100%;
+        gap: 10px;
+        padding: 5px;
+    }
+    
+    .form-input-nome,
+    .form-input-email,
+    .form-input-tel{
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .form-input-nome::placeholder,
+    .form-input-email::placeholder,
+    .form-input-tel::placeholder{
+        font-size: 1.2rem;
+    }
+    
+    .form-input-nome:focus,
+    .form-input-email:focus,
+    .form-input-tel:focus{
+        font-size: 1.2rem;
+    }
+    
+    .form-right-direitos{
+        height: 8vh;
+        width: 100%;
+    }
+    
+    .form-right-direitos p{
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+    .form-submit{
+        height: 7vh;
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .form-submit button{
+        padding: 15px;
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+    .form-container{
+        padding: 0 10%;
+        height: 80vh;
+        width: 100%;
+    }
+    
+    .form-container-div{
+        width: 100%;
+        height: 70vh;
+    }
+    
+    
+    .form-right{
+        width: 50%;
+        padding: 15px;
+        justify-content: space-evenly;
+    }
+    
+    .form-right-text{
+        height: 10vh;
+        width: 100%;
+    }
+    
+    .form-right-text h2{
+        font-size: 1.8rem;
+    }
+    
+    .form-inputs{
+        height: 25vh;
+        width: 100%;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    button[type="submit"].success-background .whatsapp-icon {
+        font-size: 1.8rem; /* Tamanho do ícone */
+    }
+
+    .success-alert {
+        padding: 20px 20px;
+        font-size: 12px;
+        text-align: center;
+        width: 25%;
+        left: 70%;
+        top: 28%;
+    }
+    
+    .form-input-nome,
+    .form-input-email,
+    .form-input-tel{
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .form-input-nome::placeholder,
+    .form-input-email::placeholder,
+    .form-input-tel::placeholder{
+        font-size: 0.8rem;
+    }
+    
+    .form-input-nome:focus,
+    .form-input-email:focus,
+    .form-input-tel:focus{
+        font-size: 0.8rem;
+    }
+    
+    .form-right-direitos{
+        height: 8vh;
+        width: 100%;
+    }
+    
+    .form-right-direitos p{
+        font-size: 0.7rem;
+        width: 100%;
+    }
+    
+    .form-submit{
+        height: 7vh;
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .form-submit button{
+        padding: 15px;
+        width: 95%;
+    }
+
+    .form-left{
+        width: 50%;
+    }
+    
+    .form-text{
+        height: 15vh;
+        width: 100%;
+    }
+    
+    .form-text h2{
+        font-size: 1.8rem;
+        height: 7vh;
+    }
+    
+    .form-text p{
+        font-size: 0.8rem;
+        height: 8vh;
+        width: 90%;
+    }
+    
+    .form-contact-div{
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .form-contact-left{
+        height: 5vh;
+        width: 10%;
+    }
+    
+    .form-contact-left i{
+        font-size: 20px;
+        height: 5vh;
+    }
+    
+    .form-contact-right{
+        width: 90%;
+        height: 5vh;
+    }
+    
+    .form-contact-right h6{
+        font-size: 0.9rem;
+        width: 80%;
+    }
+    
+    .form-contact-right p{
+        font-size: 0.8rem;
+        width: 90%;
+    }
+    
+    .div-linha{
+        width: 100%;
+    }
+    
+    .form-linha{
+        width: 90%;
+        opacity: 0.2;
+    }
+    
+    .form-redes{
+        height: 10vh;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .form-redes i{
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1800px){
+    .form-container{
+        padding: 0 10%;
+        height: 80vh;
+        width: 100%;
+    }
+    
+    .form-container-div{
+        width: 100%;
+        height: 70vh;
+    }
+    
+    
+    .form-right{
+        width: 50%;
+        padding: 15px;
+        justify-content: space-evenly;
+    }
+    
+    .form-right-text{
+        height: 10vh;
+        width: 100%;
+    }
+    
+    .form-right-text h2{
+        font-size: 1.8rem;
+    }
+    
+    .form-inputs{
+        height: 25vh;
+        width: 100%;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    button[type="submit"].success-background .whatsapp-icon {
+        font-size: 2rem; /* Tamanho do ícone */
+    }
+
+    .success-alert {
+        padding: 20px 20px;
+        font-size: 13px;
+        text-align: center;
+        width: 20%;
+        left: 70%;
+        top: 13%;
+    }
+    
+    .form-input-nome,
+    .form-input-email,
+    .form-input-tel{
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .form-input-nome::placeholder,
+    .form-input-email::placeholder,
+    .form-input-tel::placeholder{
+        font-size: 0.8rem;
+    }
+    
+    .form-input-nome:focus,
+    .form-input-email:focus,
+    .form-input-tel:focus{
+        font-size: 0.8rem;
+    }
+    
+    .form-right-direitos{
+        height: 8vh;
+        width: 100%;
+    }
+    
+    .form-right-direitos p{
+        font-size: 0.7rem;
+        width: 100%;
+    }
+    
+    .form-submit{
+        height: 7vh;
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .form-submit button{
+        padding: 15px;
+        width: 95%;
+    }
+
+    .form-left{
+        width: 50%;
+    }
+    
+    .form-text{
+        height: 15vh;
+        width: 100%;
+    }
+    
+    .form-text h2{
+        font-size: 1.8rem;
+        height: 7vh;
+    }
+    
+    .form-text p{
+        font-size: 0.9rem;
+        height: 8vh;
+        width: 90%;
+    }
+    
+    .form-contact-div{
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .form-contact-left{
+        height: 5vh;
+        width: 10%;
+    }
+    
+    .form-contact-left i{
+        font-size: 20px;
+        height: 5vh;
+    }
+    
+    .form-contact-right{
+        width: 90%;
+        height: 5vh;
+    }
+    
+    .form-contact-right h6{
+        font-size: 1rem;
+        width: 80%;
+    }
+    
+    .form-contact-right p{
+        font-size: 0.8rem;
+        width: 90%;
+    }
+    
+    .div-linha{
+        width: 100%;
+    }
+    
+    .form-linha{
+        width: 90%;
+        opacity: 0.2;
+    }
+    
+    .form-redes{
+        height: 10vh;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .form-redes i{
+        font-size: 25px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 1801px){
+    .form-container{
+        padding: 0 10%;
+        height: 80vh;
+        width: 100%;
+    }
+    
+    .form-container-div{
+        width: 100%;
+        height: 70vh;
+    }
+    
+    .success-alert {
+        padding: 25px 20px;
+        font-size: 17px;
+        text-align: center;
+        width: 20%;
+        left: 70%;
+        top: 27%;
+    }
+    
+    .form-right{
+        width: 50%;
+        padding: 15px;
+        justify-content: space-evenly;
+    }
+    
+    .form-right-text{
+        height: 10vh;
+        width: 100%;
+    }
+    
+    .form-right-text h2{
+        font-size: 2rem;
+    }
+    
+    .form-inputs{
+        height: 25vh;
+        gap: 10px;
+        padding: 5px;
+        width: 90%;
+    }
+    
+    .form-input-nome,
+    .form-input-email,
+    .form-input-tel{
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .form-input-nome::placeholder,
+    .form-input-email::placeholder,
+    .form-input-tel::placeholder{
+        font-size: 1.1rem;
+    }
+    
+    .form-input-nome:focus,
+    .form-input-email:focus,
+    .form-input-tel:focus{
+        font-size: 1.1rem;
+    }
+    
+    .form-right-direitos{
+        height: 8vh;
+        width: 100%;
+    }
+    
+    .form-right-direitos p{
+        font-size: 1rem;
+        width: 80%;
+    }
+    
+    .form-submit{
+        height: 7vh;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .form-submit button{
+        width: 90%;
+        font-size: 1.4rem;
+    }
+
+    .form-left{
+        width: 50%;
+    }
+    
+    .form-text{
+        height: 15vh;
+        width: 100%;
+    }
+    
+    .form-text h2{
+        font-size: 2.4rem;
+        height: 7vh;
+    }
+    
+    .form-text p{
+        font-size: 1.5rem;
+        height: 8vh;
+        width: 90%;
+    }
+    
+    .form-contact-div{
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .form-contact-left{
+        height: 5vh;
+        width: 10%;
+    }
+    
+    .form-contact-left i{
+        font-size: 30px;
+        height: 5vh;
+    }
+    
+    .form-contact-right{
+        width: 90%;
+        height: 5vh;
+    }
+    
+    .form-contact-right h6{
+        font-size: 1.1rem;
+        width: 80%;
+    }
+    
+    .form-contact-right p{
+        font-size: 1.2rem;
+        width: 90%;
+    }
+    
+    .div-linha{
+        width: 100%;
+    }
+    
+    .form-linha{
+        width: 90%;
+        opacity: 0.2;
+    }
+    
+    .form-redes{
+        height: 10vh;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .form-redes i{
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+    }
+}

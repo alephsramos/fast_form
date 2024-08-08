@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário PipeRun</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <form class="form-right animate animate-right" id="contactForm">
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="spinner">
+                <i class="fas fa-spinner fa-spin"></i> <!-- Ícone de carregamento -->
+                <i class="fas fa-check success-check"></i> <!-- Ícone de check -->
+            </div>
+        </div>
+        <div class="form-right-text">
+            <h2>Solicite seu orçamento</h2>
+        </div>
+        <div class="form-inputs">
+            <input class="form-input-nome" required type="text" placeholder="Nome" id="name" name="name">
+            <input class="form-input-email" required type="email" placeholder="E-mail" id="email" name="email">
+            <input class="form-input-tel" required type="tel" placeholder="+55 21 987654321" id="tel" name="tel">
+            <textarea id="selectedProducts" name="selectedProducts" style="display: none;"></textarea>
+        </div>
+        <div class="form-submit">
+            <button id="submitButton" type="submit">
+                <span class="button-text">Enviar</span>
+                <i class="fab fa-whatsapp whatsapp-icon" style="display: none;"></i>
+            </button>
+            <div id="successAlert" class="success-alert" style="display: none;">
+                Formulário enviado com sucesso!
+            </div>
+        </div>
+    </form>
+    <script defer src="src/script.js"></script>
+</body>
+</html>
