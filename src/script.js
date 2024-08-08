@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     heading.innerHTML = 'Enviado com sucesso!';
 
                     // Redireciona para o WhatsApp
-                    window.open('https://wa.link/fiqr5h');
+                    window.open('https://wa.link/gmgjxp');
                 }, 500); // Tempo para a transição do check
             }, 300); // Tempo da animação do spinner
         })
