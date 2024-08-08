@@ -844,7 +844,7 @@ button[type="submit"].success-background .whatsapp-icon {
     .form-input-email,
     .form-input-tel{
         width: 90%;
-        padding: 15px;
+        padding: 20px;
     }
     
     .form-input-nome::placeholder,
@@ -975,7 +975,7 @@ button[type="submit"].success-background .whatsapp-icon {
     
     .form-right{
         width: 50%;
-        padding: 15px;
+        padding: 20px;
         justify-content: space-evenly;
     }
     
