@@ -86,21 +86,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(() => {
                     loadingOverlay.style.display = 'none'; // Oculta o overlay após a animação
 
-                    // Limpa o formulário após o envio
-                    formElement.reset();
-                    textArea.value = ''; // Limpa o textarea
+                    // Remove todos os campos do formulário
+                    formElement.innerHTML = '';
 
-                    // Altera o botão para o link do WhatsApp com ícone
-                    submitButton.classList.add('success-background');
-                    buttonText.style.display = 'none'; // Esconde o texto do botão
-                    whatsappIcon.style.display = 'inline-block'; // Mostra o ícone do WhatsApp
+                    // Cria uma mensagem centralizada no meio da tela
+                    const messageElement = document.createElement('div');
+                    messageElement.style.position = 'fixed';
+                    messageElement.style.top = '50%';
+                    messageElement.style.left = '50%';
+                    messageElement.style.transform = 'translate(-50%, -50%)';
+                    messageElement.style.fontSize = '24px';
+                    messageElement.style.textAlign = 'center';
+                    messageElement.innerHTML = 'Você já enviou!';
 
-                    // Muda o texto do h2 para "Já enviado" com ícone de check
-                    const heading = document.querySelector('#contactForm .form-right-text h2');
-                    heading.innerHTML = 'Enviado com sucesso!';
-
-                    // Redireciona para o WhatsApp
-                    window.open('https://wa.link/gmgjxp');
+                    document.body.appendChild(messageElement);
                 }, 500); // Tempo para a transição do check
             }, 300); // Tempo da animação do spinner
         })
