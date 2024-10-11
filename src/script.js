@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     source: "SITE_FAST_FORM"
                 },
                 custom_fields: {
-                    url_conversao: "https://atacado2.fastdrywall.com.br/", // Substitua pelo URL desejado
+                    url_conversao: "", 
                     utm_source: "",
                     utm_medium: "",
                     utm_campaign: "",
