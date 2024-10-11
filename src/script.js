@@ -10,38 +10,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const checkIcon = spinner.querySelector('.fa-check');
 
     formElement.addEventListener('submit', function (event) {
-        // Previne o envio padrão do formulário
         event.preventDefault();
 
-        // Exibe o overlay de carregamento
         loadingOverlay.style.display = 'flex';
-
-        // Preenche o textarea com os dados dos produtos selecionados
         textArea.value = generateQuoteText();
 
-        // Captura os valores dos campos do formulário
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const tel = document.getElementById('tel').value;
         const selectedProducts = textArea.value;
-
-        // Gera um identificador único para cada submissão
         const uniqueId = generateUniqueId();
 
         const title = `${name} | ${email} | ${tel} | ${uniqueId}`;
 
-        // Monta o payload conforme necessário para o PipeRun
+        // Define o parâmetro de URL de conversão
+        const urlConversao = window.location.href;
+
         const payload = {
-
             "rules": {
-    
-            "update": "false",
-            "filter_status_update": "open",
-            "equal_pipeline": "true",
-            "status": "open",
-            "validate_cpf": "false",
+                "update": "false",
+                "filter_status_update": "open",
+                "equal_pipeline": "true",
+                "status": "open",
+                "validate_cpf": "false",
             },
-
             leads: [{
                 id: name,
                 title: name,
@@ -52,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     source: "SITE_FAST_FORM"
                 },
                 custom_fields: {
-                    url_conversao: "", 
+                    url_conversao: urlConversao, // Usa a URL atual como conversão
                     utm_source: "",
                     utm_medium: "",
                     utm_campaign: "",
@@ -68,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }]
         };
 
-        // Envia a requisição para o endpoint do PipeRun
         fetch('https://app.pipe.run/webservice/integradorJson?hash=1e28b707-3c02-4393-bb9d-d3826b060dcd', {
             method: 'POST',
             headers: {
@@ -80,16 +71,11 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(data => {
             console.log('Success:', data);
 
-            // Oculta o spinner e mostra o ícone de check
             setTimeout(() => {
                 spinner.classList.add('show-check');
                 setTimeout(() => {
-                    loadingOverlay.style.display = 'none'; // Oculta o overlay após a animação
-
-                    // Remove todos os campos do formulário
+                    loadingOverlay.style.display = 'none';
                     formElement.innerHTML = '';
-
-                    // Cria uma mensagem centralizada no meio da tela
                     const messageElement = document.createElement('div');
                     messageElement.style.position = 'fixed';
                     messageElement.style.top = '50%';
@@ -100,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     messageElement.innerHTML = 'Você já enviou!';
 
                     document.body.appendChild(messageElement);
-                }, 500); // Tempo para a transição do check
-            }, 300); // Tempo da animação do spinner
+                }, 500);
+            }, 300);
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -122,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return text;
     }
 
-    // Função para gerar um identificador único
     function generateUniqueId() {
         return new Date().getTime().toString();
     }
