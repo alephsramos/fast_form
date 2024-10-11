@@ -23,8 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const title = `${name} | ${email} | ${tel} | ${uniqueId}`;
 
-        // Define o parâmetro de URL de conversão
+        // Define o parâmetro de URL de conversão e utms
         const urlConversao = window.location.href;
+        const utms = getUTMParameters();
 
         const payload = {
             "rules": {
@@ -44,16 +45,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     source: "SITE_FAST_FORM"
                 },
                 custom_fields: {
-                    url_conversao: urlConversao, // Usa a URL atual como conversão
-                    utm_source: "",
-                    utm_medium: "",
-                    utm_campaign: "",
-                    utm_term: "",
-                    utm_content: "",
-                    utm_position: "",
-                    utm_device: "",
-                    utm_match: "",
-                    utm_creative: ""
+                    url_conversao: urlConversao,
+                    utm_source: utms.utm_source || "",
+                    utm_medium: utms.utm_medium || "",
+                    utm_campaign: utms.utm_campaign || "",
+                    utm_term: utms.utm_term || "",
+                    utm_content: utms.utm_content || "",
+                    utm_position: utms.utm_position || "",
+                    utm_device: utms.utm_device || "",
+                    utm_match: utms.utm_match || "",
+                    utm_creative: utms.utm_creative || ""
                 },
                 tags: ["inicial"],
                 notes: ["formulario direcionado do site."]
@@ -110,5 +111,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function generateUniqueId() {
         return new Date().getTime().toString();
+    }
+
+    // Função para capturar parâmetros UTM da URL
+    function getUTMParameters() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return {
+            utm_source: urlParams.get('utm_source'),
+            utm_medium: urlParams.get('utm_medium'),
+            utm_campaign: urlParams.get('utm_campaign'),
+            utm_term: urlParams.get('utm_term'),
+            utm_content: urlParams.get('utm_content'),
+            utm_position: urlParams.get('utm_position'),
+            utm_device: urlParams.get('utm_device'),
+            utm_match: urlParams.get('utm_match'),
+            utm_creative: urlParams.get('utm_creative')
+        };
     }
 });
