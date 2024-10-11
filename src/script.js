@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     messageElement.style.transform = 'translate(-50%, -50%)';
                     messageElement.style.fontSize = '24px';
                     messageElement.style.textAlign = 'center';
-                    messageElement.innerHTML = 'Você já enviou!';
+                    messageElement.innerHTML = 'Muito obrigado, entraremo em contato em breve!';
 
                     document.body.appendChild(messageElement);
                 }, 500);
