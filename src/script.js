@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 name: name,
                 mobile_phone: tel,
                 last_conversion: {
-                    source: "SITE_FAST_FORM"
+                    source: utms.utm_source || "organico" // Adicionando "organico" como padrão
                 },
                 custom_fields: {
                     url_conversao: urlConversao,
-                    utm_source: utms.utm_source || "",
+                    utm_source: utms.utm_source || "organico", // Adicionando "organico" como padrão
                     utm_medium: utms.utm_medium || "",
                     utm_campaign: utms.utm_campaign || "",
                     utm_term: utms.utm_term || "",
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     messageElement.style.transform = 'translate(-50%, -50%)';
                     messageElement.style.fontSize = '24px';
                     messageElement.style.textAlign = 'center';
-                    messageElement.innerHTML = 'Muito obrigado, entraremo em contato em breve!';
+                    messageElement.innerHTML = 'Muito obrigado, entraremos em contato em breve!';
 
                     document.body.appendChild(messageElement);
                 }, 500);
